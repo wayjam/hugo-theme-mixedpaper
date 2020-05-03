@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section id="main" class="index">
+  <div class="post_list container">
+    {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    {{ range $paginator.Pages }}
+    <article class="post content">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z0700" }}" class="date">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+      <h3 class="title">
+        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+      </h3>
+      <div class="post_content summary">
+        {{ .Summary }}
+      </div>
+    </article>
+    {{ end }}
+    {{ partial "pagination.html" . }}
+  </div>
+</section>
+{{ end }}

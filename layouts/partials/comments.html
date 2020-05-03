@@ -1,0 +1,35 @@
+<aside id="comments">
+  {{- $comment := .Site.Params.comment}}
+  {{- if eq $comment.type "none" }}
+  {{- else if eq $comment.type "valine"}}
+    {{- if $comment.valine.visitor -}}
+      <span id="{{ .RelPermalink | relURL }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
+      <span class="post-meta-item-text">文章阅读量 </span>
+      <span class="leancloud-visitors-count">0</span>
+    </span>
+    {{- end }}
+    <div id="vcomments"></div>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <script type="text/javascript">
+          var GUEST = ['nick', 'mail', 'link'];
+          var meta = '{{- $comment.valine.meta }}';
+          meta = meta.split(',').filter(function (item) {
+              return GUEST.indexOf(item) > -1;
+          });
+          new Valine({
+              el: '#vcomments',
+              verify: {{- $comment.valine.verify }},
+              notify: {{- $comment.valine.notify }},
+              appId: '{{- $comment.valine.appid }}',
+              appKey: '{{- $comment.valine.appkey }}',
+              placeholder: '{{- $comment.valine.placeholder }}',
+              avatar: '{{- $comment.valine.avatar }}',
+              meta: meta,
+              pageSize: '{{- $comment.valine.pageSize }}' || 10,
+              visitor: {{- $comment.valine.visitor }}
+      });
+    </script>
+  {{- else if eq $comment.type "disqus" }}
+    {{ template "_internal/disqus.html" .}}
+  {{- end }}
+</aside>

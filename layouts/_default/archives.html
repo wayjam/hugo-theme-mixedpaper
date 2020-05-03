@@ -1,0 +1,27 @@
+{{ define "main" }}
+<!-- All of the site's posts grouped by year -->
+<section id="main">
+  <div class="container">
+    <section id="archives" class="post_list content">
+      <div class="listing">
+        {{ $paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) .Site.Params.listPaginate }}
+        {{- range $index, $element := $paginator.Pages -}}
+        {{- $thisYear := $element.Date.Format "2006" }}
+        {{- $lastElement := $index | add -1 | index $paginator.Pages }}
+        {{- if or (eq $index 0) ( ne ($lastElement.Date.Format "2006") $thisYear ) }}
+        <div class="collection-title">
+          <h3 class="archive-year">{{ $thisYear }}</h3>
+        </div>
+        {{- end }}
+        <div class="archive-post line_item item">
+          <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+            <span>{{ .Title }}</span>
+            <span class="date">{{ $element.Date.Format "01-02" }}</span>
+          </a>
+        </div>
+        {{- end }}
+      </div>
+    </section>
+  </div>
+</section>
+{{ end }}

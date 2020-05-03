@@ -1,0 +1,21 @@
+<header id="header">
+  <div class="header_container">
+    <h1 class="sitetitle">
+      <a href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">{{ .Site.Title }}</a>
+    </h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+        {{ range .Site.Menus.main }}
+          <li>
+            <a href="{{ .URL | relLangURL }}">
+              {{ .Pre }}
+              <span>{{ .Name }}</span>
+            </a>
+          </li>
+        {{ end }}
+        <li><a href="{{ .Site.RSSLink }}" type="application/rss+xml">RSS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

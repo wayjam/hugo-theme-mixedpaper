@@ -1,0 +1,87 @@
+baseURL = "https://example.com"
+languageCode = "en-us"
+title = "Mixedpaper"
+theme = "mixedpaper-hugo"
+enableRobotsTXT = true
+paginate = 10 # Set the number of posts to show before overflowing to the next page.
+summaryLength = 10 # Configure how long the post summary should be on the homepage.
+pygmentsUseClasses = true # enable theme-defined highlight style
+
+# Add your Google Analytics identifier: UA-XXXXXXXX-X
+googleAnalytics = ""
+
+# Add your Disqus shortname here.
+disqusShortname = ""
+
+[taxonomies]
+tag = "tags"
+
+[author]
+name = "Hugo Author"
+
+[params]
+# Blog description at the top of the homepage. Supports markdown.
+description = "Mixedpaper is a minimalist Hugo theme, perfect for writers and bloggers."
+showReadMore = false
+mainSections = [
+	"post",
+]
+# paginate of archives, tags and categories
+listPaginate = 20
+postLicense = ""
+
+[params.comment]
+type = "none"
+
+[params.comment.valine]
+appid = "appid"
+appkey = "appkey"
+notify = "notify"
+verify = "verify"
+placeholder = "enjoy~"
+avatar = "mm"
+meta = "nick,mail"
+pageSize = 10.0
+visitor = false
+
+# Menu links along the sidebar navigation.
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 1 # Weight is an integer used to sort the menu items. The sorting goes from smallest to largest numbers. If weight is not defined for each menu entry, Hugo will sort the entries alphabetically.
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 2
+
+[[menu.main]]
+name = "Archives"
+identifier = "archives"
+url = "/archives/"
+weight = 3
+
+# Privacy configurations: https://gohugo.io/about/hugo-and-gdpr/
+[privacy]
+[privacy.disqus]
+disable = false
+[privacy.googleAnalytics]
+anonymizeIP = true
+disable = false
+respectDoNotTrack = false
+useSessionStorage = false
+[privacy.instagram]
+disable = false
+simple = false
+[privacy.twitter]
+disable = false
+enableDNT = false
+simple = false
+[privacy.vimeo]
+disable = false
+simple = false
+[privacy.youtube]
+disable = false
+privacyEnhanced = true

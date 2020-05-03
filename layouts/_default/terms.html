@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section id="main">
+  <!-- Shows all of the site's tags -->
+  <div class="container">
+    <article class="post_list content">
+      <h1>Tags</h1>
+      <ul class="listing">
+        {{ range .Data.Terms.Alphabetical }}
+        <li class="block_item item">
+          <a href="{{ .Page.Permalink }}" title="{{ .Page.Title }}">{{ .Page.Title }}<sup>{{ .Count }}</sup></a>
+        </li>
+        {{ end }}
+      </ul>
+    </article>
+  </div>
+</section>
+{{ end }}

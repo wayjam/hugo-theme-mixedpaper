@@ -1,0 +1,12 @@
+name = "mixedpaper"
+license = "MIT"
+licenselink = "https://github.com/wayjam/hugo-theme-mixedpaper/blob/master/LICENSE.md"
+description = "A simple Hugo theme for writers and bloggers."
+homepage = "https://github.com/wayjam/hugo-theme-mixedpaper"
+tags = ["blog", "minimalist", "paper", "clean", "simple", "light"]
+features = ["blog", "responsive", "social media"]
+min_version = "0.41"
+
+[author]
+	name = "WayJam So"
+	homepage = "https://github.com/wayjam"

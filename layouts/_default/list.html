@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section id="main">
+  <div class="container">
+    <section id="archives" class="post_list content">
+      <ul class="listing">
+        {{ range (.Paginator .Site.Params.listPaginate).Pages }}
+        <li class="line_item item">
+          <a href="{{ .Permalink }}" title="{{ .Title }}">
+            <span>{{ .Title }}</span>
+            <span class="date">{{ .PublishDate.Format "2006-01-02" }}</span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ partial "pagination.html" . }}
+  </div>
+</section>
+{{ end }}
