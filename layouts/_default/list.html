@@ -3,7 +3,7 @@
   <div class="container">
     <section id="archives" class="post_list content">
       <ul class="listing">
-        {{ range (.Paginator .Site.Params.listPaginate).Pages }}
+        {{ range (.Paginator (.Site.Params.listPaginate | default 20)).Pages }}
         <li class="line_item item">
           <a href="{{ .Permalink }}" title="{{ .Title }}">
             <span>{{ .Title }}</span>
