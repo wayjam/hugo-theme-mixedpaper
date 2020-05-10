@@ -376,6 +376,12 @@ body {
   .prev::before {
     color: #009688;
   }
+
+  &:after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
 }
 
 /* List */
@@ -749,6 +755,18 @@ body {
 #comments {
   padding: 0.5em;
   margin: 1em 0;
+  .leancloud_visitors {
+    display: block;
+    margin: 0.5em 0px;
+    .leancloud-visitors-count {
+      background: #9e9e9e;
+      font-size: 80%;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.2em 0.5em;
+      border-radius: 50%;
+    }
+  }
 }
 
 /* Code Hightlight */
@@ -1225,7 +1243,7 @@ body {
     color: #666;
     font-style: italic;
     &:hover {
-			color: #6abfa3;
+      color: #6abfa3;
       cursor: pointer;
     }
   }

@@ -1,12 +1,12 @@
 <aside id="comments">
   {{- $comment := .Site.Params.comment}}
-  {{- if eq $comment.type "none" }}
+  {{- if or (eq $comment.type "none") (.Params.noComment) (eq .Type "section") }}
   {{- else if eq $comment.type "valine"}}
     {{- if $comment.valine.visitor -}}
       <span id="{{ .RelPermalink | relURL }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
-      <span class="post-meta-item-text">文章阅读量 </span>
-      <span class="leancloud-visitors-count">0</span>
-    </span>
+				<span class="post-meta-item-text">文章阅读量</span>
+				<span class="leancloud-visitors-count">0</span>
+			</span>
     {{- end }}
     <div id="vcomments"></div>
     <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
