@@ -3,7 +3,7 @@ license = "MIT"
 licenselink = "https://github.com/wayjam/hugo-theme-mixedpaper/blob/master/LICENSE.md"
 description = "A simple Hugo theme for writers and bloggers."
 homepage = "https://github.com/wayjam/hugo-theme-mixedpaper"
-tags = ["blog", "minimalist", "paper", "clean", "simple", "light"]
+tags = ["blog", "minimalist", "paper", "clean", "simple", "light", "writing"]
 features = ["blog", "responsive", "social media"]
 min_version = "0.41"
 

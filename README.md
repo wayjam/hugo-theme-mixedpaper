@@ -6,8 +6,9 @@ Mixedpaper is a minimalist Hugo theme for writers and bloggers.
 
 - Clean and minimalist
 - SCSS styling
-- JavaScript free
 - Syntax highlighting
+- Styled Archives
+- Minimal vanilla js
 
 ## Installation
 
