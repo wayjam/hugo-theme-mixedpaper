@@ -2,12 +2,16 @@
 
 {{ define "main" }}
   <section id="main" class="notfound">
-    <h1 class="not-found-title">404</h1>
-    <div class="block">
-      <h3>Sorry, we couldn't find the page you're looking for.</h3>
-      <div class="line"></div>
-      <p class="back"><a href="{{ "/" | relLangURL }}">Go back home</a></p>
-    </div>
+		<div class="container">
+			<div class="content">
+				<h1 class="not-found-title">404</h1>
+				<div class="block">
+					<h3>Sorry, we couldn't find the page you're looking for.</h3>
+					<div class="line"></div>
+					<p class="back"><a href="{{ "/" | relLangURL }}">Go back home</a></p>
+				</div>
+			</div>
+		</div>
   </section>
 {{ end }}
 
