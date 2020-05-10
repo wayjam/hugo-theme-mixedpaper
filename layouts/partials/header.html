@@ -5,7 +5,7 @@
     </h1>
     <nav class="navbar">
       <ul>
-        <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+        <li><a href="{{ .Site.BaseURL | default '/' }}">Home</a></li>
         {{ range .Site.Menus.main }}
           <li>
             <a href="{{ .URL | relLangURL }}">

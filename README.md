@@ -13,6 +13,10 @@ Mixedpaper is a minimalist Hugo theme for writers and bloggers.
 
 Navigate to the root directory of your Hugo site and clone this repository.
 
+```
+git clone https://github.com/wayjam/hugo-theme-mixedpaper.git themes/mixedpaper
+```
+
 Refer to the [Hugo docs](https://gohugo.io/getting-started/quick-start/) for more information.
 
 ## Configuration
