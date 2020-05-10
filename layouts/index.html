@@ -10,6 +10,9 @@
       </h3>
       <div class="post_content summary">
         {{ .Summary }}
+				{{ if .Truncated }}
+					<span class="hellip">&hellip;</span>
+				{{ end }}
       </div>
     </article>
     {{ end }}

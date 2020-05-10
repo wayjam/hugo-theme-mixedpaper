@@ -1,7 +1,7 @@
-+++
-title = "Archives"
-description = ""
-+++
+---
+title: Archives
+description:
+---
 
 You can change archives page details above.
 
