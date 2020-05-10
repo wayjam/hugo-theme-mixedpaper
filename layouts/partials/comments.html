@@ -11,22 +11,24 @@
     <div id="vcomments"></div>
     <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
     <script type="text/javascript">
-          var GUEST = ['nick', 'mail', 'link'];
-          var meta = '{{- $comment.valine.meta }}';
-          meta = meta.split(',').filter(function (item) {
-              return GUEST.indexOf(item) > -1;
+          const meta = '{{- $comment.valine.meta }}'.split(',').filter(function (item) {
+              return ['nick','mail','link'].indexOf(item) > -1;
           });
+					const requiredFields = '{{- $comment.valine.requiredFields }}'.split(',').filter(function(item) {
+						return ['nick', 'mail'].indexOf(item) > -1;
+					})
           new Valine({
               el: '#vcomments',
-              verify: {{- $comment.valine.verify }},
-              notify: {{- $comment.valine.notify }},
               appId: '{{- $comment.valine.appid }}',
               appKey: '{{- $comment.valine.appkey }}',
               placeholder: '{{- $comment.valine.placeholder }}',
               avatar: '{{- $comment.valine.avatar }}',
-              meta: meta,
               pageSize: '{{- $comment.valine.pageSize }}' || 10,
-              visitor: {{- $comment.valine.visitor }}
+              visitor: {{- $comment.valine.visitor }},
+							highlight: {{- $comment.valine.highlight }},
+							recordIP: {{- $comment.valine.recordIP }},
+						  requiredFields: requiredFields || undefined,
+              meta: meta || undefined,
       });
     </script>
   {{- else if eq $comment.type "disqus" }}
