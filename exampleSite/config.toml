@@ -6,7 +6,7 @@ enableRobotsTXT = true
 paginate = 3 # Set the number of posts to show before overflowing to the next page.
 summaryLength = 100 # Configure how long the post summary should be on the homepage.
 pygmentsUseClasses = true # enable theme-defined highlight style
-hasCJKLanguage = true
+hasCJKLanguage = false
 
 # Add your Google Analytics identifier: UA-XXXXXXXX-X
 googleAnalytics = ""
