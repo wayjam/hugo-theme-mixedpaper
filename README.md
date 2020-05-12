@@ -41,17 +41,16 @@ Supported Disqus and Valine now.
 
 ```toml
 [params.comment]
-type = "disqus" # or valine
-[params.comment.valine]
-appid = "appid"
-appkey = "appkey"
-notify = "notify"
-verify = "verify"
+appid = "your-appid"
+appkey = "your-appkey"
 placeholder = "enjoy~"
 avatar = "mm"
-meta = "nick,mail"
 pageSize = 10.0
 visitor = false
+recordIP = true
+highlight = true
+meta = "nick,mail"
+requiredFields = "nick,mail"
 ```
 
 #### More
