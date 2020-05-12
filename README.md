@@ -40,6 +40,12 @@ To enable theme-defined highlighting style, please set `pygmentsUseClasses = tru
 Supported Disqus and Valine now.
 
 ```toml
+disqusShortname = ""
+```
+
+OR
+
+```toml
 [params.comment]
 appid = "your-appid"
 appkey = "your-appkey"
@@ -59,4 +65,4 @@ Refer to `exampleSite/config.toml` for more example.
 
 ## License
 
-Released under the [MIT License](https://github.com/wayjam/hugo-theme-mixedpaper/blob/master/LICENSE.md).
+Released under the [MIT License](https://github.com/wayjam/hugo-theme-mixedpaper/blob/master/LICENSE).

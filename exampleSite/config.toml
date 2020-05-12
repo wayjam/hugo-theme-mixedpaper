@@ -11,9 +11,6 @@ hasCJKLanguage = false
 # Add your Google Analytics identifier: UA-XXXXXXXX-X
 googleAnalytics = ""
 
-# Add your Disqus shortname here.
-disqusShortname = ""
-
 [taxonomies]
 tag = "tags"
 
@@ -33,6 +30,9 @@ postLicense = ""
 
 [params.comment]
 type = "none"
+
+# Add your Disqus shortname here.
+disqusShortname = ""
 
 [params.comment.valine]
 appid = "your-appid"
