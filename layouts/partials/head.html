@@ -1,32 +1,36 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="format-detection" content="telephone=no"/>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
 
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-    <!-- Icons -->
-		<link rel="shortcut icon" href="{{ `favicon.ico` | absURL }}" type="image/x-icon">
-    <meta name="theme-color" content="#ffffff">
+  <title>
+    {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+  </title>
 
-    <!-- Styles -->
+  <!-- Icons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ `apple-touch-icon.png` | relURL }}" />
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ `favicon-32x32.png` | relURL }}" />
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ `favicon-16x16.png` | relURL }}" />
+	<link rel="manifest" href="{{ `manifest.json | relURL` }}" />
+  <meta name="theme-color" content="#ffffff" />
 
-    <!-- Reset -->
-    <link rel="stylesheet" href="https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css"/>
+  <!-- Reset -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/modern-normalize@0.6.0/modern-normalize.css"
+  />
 
-    <!-- Use Hugo Pipes to process the Sass file (convert to CSS, minify, and add a hash) -->
-    {{ $base_style := resources.Get "css/basic.scss" | toCSS | minify | fingerprint }}
-    {{ $main_style := resources.Get "css/main.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $base_style.Permalink }}"/>
-    <link rel="stylesheet" href="{{ $main_style.Permalink }}"/>
+  <!-- Use Hugo Pipes to process the Sass file (convert to CSS, minify, and add a hash) -->
+  {{ $base_style := resources.Get "css/basic.scss" | toCSS | minify | fingerprint }}
+	{{ $main_style := resources.Get "css/main.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $base_style.Permalink }}" />
+  <link rel="stylesheet" href="{{ $main_style.Permalink }}" />
 
-    <!-- Modify the custom.css file inside static > css to use vanilla css -->
-    <!-- <link type="text/css" rel="stylesheet" href="{{ "/" | relURL }}css/custom.css"> -->
- 
-    {{ with .OutputFormats.Get "RSS" }}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end }}
-    {{- if not .Site.IsServer -}}
-      {{ template "_internal/google_analytics.html" . }}
-    {{- end -}}
+  {{ with .OutputFormats.Get "RSS" }}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end }}
+	{{ if not .Site.IsServer }}
+		{{ template "_internal/google_analytics.html" . }}
+	{{ end }}
 </head>
