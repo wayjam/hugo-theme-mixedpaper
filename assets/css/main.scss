@@ -600,6 +600,7 @@ body {
       display: block;
       padding: 0.6em 1em;
       margin: 0.8em 0;
+      font-size: 0.9em;
       word-break: break-all;
       word-wrap: break-word;
 
@@ -609,7 +610,6 @@ body {
         white-space: pre-wrap;
         background-color: transparent;
         border-radius: 0;
-        font-size: 0.9em;
         min-width: 300px;
       }
     }
@@ -803,13 +803,14 @@ body {
       }
     }
   }
+
   & > .chroma .lntd:first-child {
     width: 10px;
   }
+
   pre {
     border-top: 1px solid #d1d7dc;
     overflow: auto;
-    font-size: 0.9em;
     min-width: 300px;
   }
 
