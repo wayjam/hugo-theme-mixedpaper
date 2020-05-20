@@ -17,8 +17,10 @@ You can find screenshot at `images/` or a demo on <https://themes.gohugo.io/hugo
 Navigate to the root directory of your Hugo site and clone this repository.
 
 ```
-git clone https://github.com/wayjam/hugo-theme-mixedpaper.git themes/mixedpaper
+git submodule add https://github.com/wayjam/hugo-theme-mixedpaper.git themes/mixedpaper
 ```
+
+Then, add the theme to the site configuration(`config.toml`).
 
 Refer to the [Hugo docs](https://gohugo.io/getting-started/quick-start/) for more information.
 
