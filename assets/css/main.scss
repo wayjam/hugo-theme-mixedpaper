@@ -602,13 +602,11 @@ body {
       padding: 0.6em 1em;
       margin: 0.8em 0;
       font-size: 0.9em;
-      word-break: break-all;
-      word-wrap: break-word;
+      overflow: auto;
 
       code {
         padding: 0;
         border-width: 0;
-        white-space: pre-wrap;
         background-color: transparent;
         border-radius: 0;
         min-width: 300px;
@@ -758,7 +756,6 @@ body {
 
 /* Comment */
 #comments {
-  padding: 0.5em;
   margin: 1em 0;
   .leancloud_visitors {
     display: block;
@@ -798,8 +795,6 @@ body {
         margin: 0;
         padding: 0;
         min-width: 0;
-        word-wrap: initial;
-        word-break: initial;
         border: 0;
       }
     }
@@ -1205,6 +1200,8 @@ body {
 
   .content {
     margin: 1em auto;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   .post {
@@ -1217,11 +1214,16 @@ body {
     }
   }
 
-  .other_posts span.prev,
-  .other_posts span.next {
+  .other_posts .prev,
+  .other_posts .next {
     display: block;
     text-align: center;
     width: 100%;
+    float: none;
+  }
+
+  #comments {
+    margin-top: 0;
   }
 
   .hide-sm {
