@@ -610,6 +610,10 @@ body {
         background-color: transparent;
         border-radius: 0;
         min-width: 300px;
+        white-space: pre;
+        overflow-wrap: normal;
+        word-break: normal;
+        overflow-x: initial;
       }
     }
 
