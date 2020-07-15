@@ -1,7 +1,7 @@
 baseURL = "https://example.com"
 languageCode = "en-us"
 title = "Mixedpaper"
-theme = "hugo-theme-mixedpaper"
+theme = "mixedpaper"
 enableRobotsTXT = true
 paginate = 3 # Set the number of posts to show before overflowing to the next page.
 summaryLength = 100 # Configure how long the post summary should be on the homepage.

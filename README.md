@@ -24,6 +24,13 @@ Then, add the theme to the site configuration(`config.toml`).
 
 Refer to the [Hugo docs](https://gohugo.io/getting-started/quick-start/) for more information.
 
+## Upgrade
+
+```
+cd themes/mixedpaper
+git submodule update --remote --merge
+```
+
 ## Configuration
 
 #### Hightlight
