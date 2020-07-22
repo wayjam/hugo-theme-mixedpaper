@@ -4,9 +4,9 @@
   {{- else if eq $comment.type "valine"}}
     {{- if $comment.valine.visitor -}}
       <span id="{{ .RelPermalink | relURL }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
-				<span class="post-meta-item-text">文章阅读量</span>
-				<span class="leancloud-visitors-count">0</span>
-			</span>
+        <span class="post-meta-item-text">文章阅读量</span>
+        <span class="leancloud-visitors-count">0</span>
+      </span>
     {{- end }}
     <div id="vcomments"></div>
     <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
@@ -14,9 +14,9 @@
           const meta = '{{- $comment.valine.meta }}'.split(',').filter(function (item) {
               return ['nick','mail','link'].indexOf(item) > -1;
           });
-					const requiredFields = '{{- $comment.valine.requiredFields }}'.split(',').filter(function(item) {
-						return ['nick', 'mail'].indexOf(item) > -1;
-					})
+          const requiredFields = '{{- $comment.valine.requiredFields }}'.split(',').filter(function(item) {
+            return ['nick', 'mail'].indexOf(item) > -1;
+          })
           new Valine({
               el: '#vcomments',
               appId: '{{- $comment.valine.appid }}',
@@ -25,9 +25,9 @@
               avatar: '{{- $comment.valine.avatar }}',
               pageSize: '{{- $comment.valine.pageSize }}' || 10,
               visitor: {{- $comment.valine.visitor }},
-							highlight: {{- $comment.valine.highlight }},
-							recordIP: {{- $comment.valine.recordIP }},
-						  requiredFields: requiredFields || undefined,
+              highlight: {{- $comment.valine.highlight }},
+              recordIP: {{- $comment.valine.recordIP }},
+              requiredFields: requiredFields || undefined,
               meta: meta || undefined,
       });
     </script>

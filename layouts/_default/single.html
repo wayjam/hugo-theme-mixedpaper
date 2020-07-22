@@ -22,16 +22,16 @@
     </div>
     <div class="clearfix"></div>
   </article>
-	{{ if not (eq .Type "section") }}
-		<div class="other_posts">
-			{{ if .PrevInSection }}
-			<a href="{{.PrevInSection.Permalink}}" class="prev">{{ .PrevInSection.LinkTitle }}</a>
-			{{ end }}
-			{{ if .NextInSection }}
-			<a href="{{.NextInSection.Permalink}}" class="next">{{ .NextInSection.LinkTitle }}</a>
-			{{ end }}
-		</div>
-		{{ partial "comments.html" . }}
-	{{ end }}
+  {{ if not (eq .Type "section") }}
+    <div class="other_posts">
+      {{ if .PrevInSection }}
+      <a href="{{.PrevInSection.Permalink}}" class="prev">{{ .PrevInSection.LinkTitle }}</a>
+      {{ end }}
+      {{ if .NextInSection }}
+      <a href="{{.NextInSection.Permalink}}" class="next">{{ .NextInSection.LinkTitle }}</a>
+      {{ end }}
+    </div>
+    {{ partial "comments.html" . }}
+  {{ end }}
 </section>
 {{ end }}
