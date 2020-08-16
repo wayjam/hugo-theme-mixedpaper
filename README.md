@@ -27,7 +27,6 @@ Refer to the [Hugo docs](https://gohugo.io/getting-started/quick-start/) for mor
 ## Upgrade
 
 ```
-cd themes/mixedpaper
 git submodule update --remote --merge
 ```
 
