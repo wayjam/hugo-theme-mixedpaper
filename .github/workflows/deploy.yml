@@ -33,10 +33,6 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Install Node.js dependencies
-        run: |
-          npm install
-
       - name: Build with Hugo
         run: |
           cd exampleSite
