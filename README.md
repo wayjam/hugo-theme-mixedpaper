@@ -2,7 +2,7 @@
 
 Mixedpaper is a minimalist Hugo theme for writers and bloggers.
 
-You can find screenshot at `images/` or a demo on <https://themes.gohugo.io/hugo-theme-mixedpaper/>.
+You can find screenshot at `images/` or a demo on [pages](https://wayjam.github.io/hugo-theme-mixedpaper/).
 
 ## Feature
 
