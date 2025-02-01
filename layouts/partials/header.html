@@ -14,7 +14,11 @@
             </a>
           </li>
         {{ end }}
-        <li class="hide-sm"><a href="{{ .Site.RSSLink }}" type="application/rss+xml">RSS</a></li>
+        {{ with .OutputFormats.Get "RSS" -}}
+          <li>
+            <a class="hide-sm" href="{{ .Permalink }}" type="{{ .MediaType.Type }}">RSS</a>
+          </li>
+        {{ end -}}
       </ul>
     </nav>
   </div>

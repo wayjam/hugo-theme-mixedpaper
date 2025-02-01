@@ -1,0 +1,73 @@
+baseURL: https://example.com
+languageCode: en-us
+title: Mixedpaper
+theme: hugo-theme-mixedpaper
+enableRobotsTXT: true
+summaryLength: 100
+pygmentsUseClasses: true
+hasCJKLanguage: false
+googleAnalytics: ""
+taxonomies:
+  tag: tags
+author:
+  name: Hugo Author
+pagination:
+  pagerSize: 3
+ignoreLogs:
+  - warning-goldmark-raw-html
+params:
+  description: Mixedpaper is a minimalist Hugo theme, perfect for writers and bloggers.
+  showReadMore: false
+  mainSections:
+    - post
+  listPaginate: 20
+  postLicense: ""
+  comment:
+    type: none
+    disqusShortname: ""
+    valine:
+      appid: your-appid
+      appkey: your-appkey
+      placeholder: enjoy~
+      avatar: mm
+      pageSize: 10
+      visitor: false
+      recordIP: true
+      highlight: true
+      meta: nick,mail
+      requiredFields: nick,mail
+menu:
+  main:
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 1
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 2
+    - name: Archives
+      identifier: archives
+      url: /archives/
+      weight: 3
+privacy:
+  disqus:
+    disable: false
+  googleAnalytics:
+    anonymizeIP: true
+    disable: false
+    respectDoNotTrack: false
+    useSessionStorage: false
+  instagram:
+    disable: false
+    simple: false
+  twitter:
+    disable: false
+    enableDNT: false
+    simple: false
+  vimeo:
+    disable: false
+    simple: false
+  youtube:
+    disable: false
+    privacyEnhanced: true

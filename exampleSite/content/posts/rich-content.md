@@ -1,21 +1,24 @@
 ---
-title: "Rich Content"
-date: "2020-01-02"
-description: "A brief description of Hugo Shortcodes"
-tags: [
-    "shortcodes",
-    "privacy",
-]
-type: "post"
+title: 'Rich Content'
+date: '2020-01-02'
+description: 'A brief description of Hugo Shortcodes'
+tags: ['shortcodes', 'privacy']
 ---
 
-Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes) for rich content, along with a [Privacy Config](https://gohugo.io/about/hugo-and-gdpr/) and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
-<!--more-->
----
+Hugo ships with several
+[Built-in Shortcodes](https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes) for rich content,
+along with a [Privacy Config](https://gohugo.io/about/hugo-and-gdpr/) and a set of Simple Shortcodes that enable static
+and no-JS versions of various social media embeds.
 
-## Instagram Simple Shortcode
+## <!--more-->
 
-{{< instagram_simple BGvuInzyFAe hidecaption >}}
+## Gist Shortcode
+
+{{< gist spf13 7896402 "img.html" >}}
+
+## Instagram Shortcode
+
+{{< instagram BWNjjyYFxVx >}}
 
 <br>
 
@@ -29,14 +32,14 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 
 ---
 
-## Twitter Simple Shortcode
+## Twitter Shortcode
 
-{{< twitter_simple 1085870671291310081 >}}
+{{< x user="SanDiegoZoo" id="1453110110599868418" >}}
 
 <br>
 
 ---
 
-## Vimeo Simple Shortcode
+## Vimeo Shortcode
 
-{{< vimeo_simple 48912912 >}}
+{{< vimeo 146022717 >}}
